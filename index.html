@@ -3969,8 +3969,11 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 <div
                     class="flex mb-8 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-700 dark:via-gray-800 dark:to-gray-900 rounded-3xl p-8 dark:text-white text-black flex-col sm:flex-row space-y-10 sm:space-y-0 sm:divide-x sm:rtl:divide-x-reverse sm:divide-blue-600/50">
                     <div class="basis-1/3 space-y-5 flex flex-col items-center py-3 sm:ltr:pr-9 sm:rtl:pl-9" x-data>
-                        <img src="./assets/onlyforyouall.png" alt="" width="50" height="50" class="d-inline-block align-text-center">
-                        <div x-text=""></div>
+                        <img src="./assets/onlyforyouall.png" alt="" width="70" height="70" class="d-inline-block align-text-center">
+                        <div x-text=""
+                            :class="getChartColor(calculatePercentage(dataUsed, dataLimit))"
+                            class="radial-progress font-black text-2xl" id="progress__bar" style="--size:0rem;
+                            --thickness: 0rem;"></div>
                         <span class="inline-block dark:text-white text-black font-semibold text-lg">🔑✅ PANEL 4 0 4 📌❇️</span>
                         <span
                             class="px-4 py-2 rounded-full inline-block shadow-md shadow-green-900 font-bold text-gray-200"
