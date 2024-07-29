@@ -3980,6 +3980,25 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                             x-text="[status == 'active' ? $t('active') : status == 'limited' ? $t('limited') : status == 'expired' ? $t('expired') : $t('disabled')]"
                             :class="[status == 'active' ? 'bg-green-500' : status == 'limited' ? 'bg-red-600' : status == 'expired' ? 'bg-orange-600' : 'bg-gray-600']"></span>
                     </div>
+                    <div x-data="{ usedTraffic: {{ user.used_traffic }}, dataLimit: {% if not user.data_limit %}∞{% else %}{{ user.data_limit }}{% endif %} }"
+                        class="basis-2/3 flex flex-row items-center sm:ltr:pl-9 sm:rtl:pr-9">
+                        <div class="data-usage w-full">
+                            <div class="dark:text-white text-black text-center mb-2"><span class="font-bold"
+                                    x-text="$t('dataUsage')"></span><span dir="ltr"></span>
+                            </div>
+                            <div class="dark:text-white text-black mt-4 text-center"><span class="font-bold"
+                                    x-text="$t('expirationDate')"></span><span dir="ltr" x-data="{expireDate: ''}"
+                                    x-init="Alpine.data( 'expireDate', expireDate = expireDateVar )"
+                                    x-text="expireDate"></span></div>
+                            <!--2023/06/31 10:43:59-->
+                            <div class="dark:text-white text-black mt-3 text-sm text-center"
+                                x-text="resetInterval == 'year' ? $t('resetIntervalYear') : resetInterval == 'month' ? $t('resetIntervalMonth') : resetInterval == 'week' ? $t('resetIntervalWeek') : resetInterval == 'day' ? $t('resetIntervalDay') : ''">
+                            </div>
+                            <div class="dark:text-white text-black mt-5 text-center"><span class="font-bold"
+                                    x-text="$t('remainingDays')"></span><span></span><span x-text="$t('remainingDaysSufix')"></span></div>
+                        </div>
+                    </div>
+                </div>
                     
                 <div class="flex flex-col gap-y-4 mb-8 text-white text-sm sm:text-base">
                     <h2 x-text="$t('howToConnect')"
