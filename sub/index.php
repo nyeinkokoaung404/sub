@@ -55,7 +55,7 @@ if ($isTextHTML) {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title><?= $user['username'] ?> - Sub Info</title>
+        <title><?= $user['404'] ?> - Sub Info</title>
         <style>
             .asli {
                 background: url('https://4kwallpapers.com/images/wallpapers/windows-server-2025-3840x2400-15386.jpg') no-repeat center;
