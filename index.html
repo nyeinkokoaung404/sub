@@ -3185,18 +3185,18 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
     <script defer="">
         const sub = "https://raw.githubusercontent.com/nyeinkokoaung404/onlyforyou/main/404.md#404-Sub"
-        let fullUrl = `${window.location.origin}https://raw.githubusercontent.com/nyeinkokoaung404/onlyforyou/main/404.md#404-Sub`;
+        let fullUrl = `${window.location.origin}https://raw.githubusercontent.com/nyeinkokoaung404/onlyforyou/main/404.md`;
         if (sub.startsWith("http")) {
             fullUrl = sub;
         }
 
         function setHrefs() {
             document.getElementById("ios-streisand").href = `streisand://import/${fullUrl}`;
-            document.getElementById("ios-v2box").href = `v2box://install-sub?url=${fullUrl}&name=Sub`
+            document.getElementById("ios-v2box").href = `v2box://install-sub?url=${fullUrl}&name=404-Sub`
             document.getElementById("android-v2rayng").href = `v2rayng://install-config?url=${fullUrl}`;
-            document.getElementById("ios-singbox").href = `sing-box://import-remote-profile?url=${fullUrl}#Sub`;
-            document.getElementById("android-singbox").href = `sing-box://import-remote-profile?url=${fullUrl}#Sub`;
-            document.getElementById("android-nekobox").href = `sn://subscription?url=${fullUrl}&name=Sub`;
+            document.getElementById("ios-singbox").href = `sing-box://import-remote-profile?url=${fullUrl}#404-Sub`;
+            document.getElementById("android-singbox").href = `sing-box://import-remote-profile?url=${fullUrl}#404-Sub`;
+            document.getElementById("android-nekobox").href = `sn://subscription?url=${fullUrl}&name=404-Sub`;
             document.getElementById("windows-clashverge").href = `clash://install-config?url=${fullUrl}`
 
 
